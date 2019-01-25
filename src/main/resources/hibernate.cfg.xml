@@ -8,7 +8,7 @@
   <session-factory>
 
     <!-- hibernate dialect -->
-    <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
     <!-- JDBC connection properties (begin) ===
     <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
@@ -32,7 +32,10 @@
     <!-- <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property> -->
 
     <!-- DataSource properties (begin) -->
-    <property name="hibernate.connection.datasource">java:/jdbc/OpenKMDS</property>
+    <!-- <property name="hibernate.connection.datasource">jdbc/OpenKMDS</property> -->
+    <!-- <property name="hibernate.connection.datasource">OpenKMDS</property> -->
+    <property name="hibernate.connection.datasource">dataSource</property>
+    <!-- <property name="hibernate.connection.datasource">java:jboss/datasources/ExampleDS</property> -->
     <property name="hibernate.hbm2ddl.auto">create</property>
     <!-- DataSource properties (end) -->
 

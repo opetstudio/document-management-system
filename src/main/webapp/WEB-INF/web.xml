@@ -74,8 +74,12 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>
         /WEB-INF/appContext.xml
-        file:${catalina.home}/OpenKM.xml
+        file:/Users/rayakurayasem/jboss/jboss-eap-7.1/openkm/deployments/OpenKM.war/WEB-INF/classes/OpenKM.xml
     </param-value>
+    <!-- <param-value>
+        /WEB-INF/appContext.xml
+        file:${catalina.home}/OpenKM.xml
+    </param-value> -->
   </context-param>
   
   <!-- Startup Servlets -->

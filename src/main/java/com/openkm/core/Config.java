@@ -583,7 +583,7 @@ public class Config {
 	public static int HIBERNATE_INDEXER_THREADS_INDEX_WRITER = 3;
 
 	// Hibernate Search indexes
-	public static String HIBERNATE_SEARCH_INDEX_HOME;
+	public static String HIBERNATE_SEARCH_INDEX_HOME = "indexes";
 	public static String HIBERNATE_SEARCH_INDEX_DIRNAME = "index";
 	public static String HIBERNATE_SEARCH_INDEX_EXCLUSIVE = "true";
 

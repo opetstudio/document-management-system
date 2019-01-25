@@ -4,7 +4,8 @@
   <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
 
   <!-- To define where the log files will be saved -->
-  <property name="LOG_PATH" value="${catalina.home}/logs"/>
+  <!-- <property name="LOG_PATH" value="${catalina.home}/logs"/> -->
+  <property name="LOG_PATH" value="/Users/rayakurayasem/jboss/jboss-eap-7.1/openkm/logs"/>
 
   <!--
     Insert the current time formatted as "yyyyMMdd'T'HHmmss" under the key
@@ -41,6 +42,7 @@
     </layout>
   </appender>
 
-  <include file="${catalina.home}/logback.xml"/>
+  <!-- <include file="${catalina.home}/logback.xml"/> -->
+    <logger name="com.openkm" level="debug" />
 
 </configuration>

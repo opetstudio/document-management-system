@@ -185,7 +185,15 @@ public class HibernateUtil {
 
 				if (HBM2DDL_CREATE.equals(hbm2ddl) || HBM2DDL_UPDATE.equals(hbm2ddl)) {
 					// Create or update translations
-					for (String res : ConfigUtils.getResources("i18n")) {
+					List<String> listFile = ConfigUtils.getResources("i18n");
+					if(listFile != null) {
+						System.out.println("HibernateUtil.getSessionFactory=====>listFile count="+listFile.size());
+					} else {
+						System.out.println("HibernateUtil.getSessionFactory=====>listFile is null");
+					}
+					for (String res : listFile) {
+						log.info("HibernateUtil.getSessionFactory=====>res="+res);
+						System.out.println("HibernateUtil.getSessionFactory=====>res="+res);
 						String oldTrans = null;
 						String langId = null;
 

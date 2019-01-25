@@ -137,6 +137,7 @@ public class UsersRolesPrincipalAdapter implements PrincipalAdapter {
 
 	@Override
 	public String getPassword(String user) throws PrincipalAdapterException {
+		System.out.println("UsersRolesPrincipalAdapter=====>>>>>>>GetPassword");
 		throw new UnsupportedOperationException("Not implemented");
 	}
 

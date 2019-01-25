@@ -60,3 +60,6 @@ OpenKM Open Source Community Edition is supported by developers and technical en
 ## License
 [OpenKM Document Management System Community Edition](https://www.openkm.com/en/open-source-document-management-system.html) is available to Open Source community under the [GNU General Public Licence version 2](https://www.gnu.org/licenses/gpl-2.0.html).
 The OpenKM source code is available for the entire community, which is free to use, modify and redistribute under the premises of such license.
+
+## default user/pass
+okmAdmin/admin

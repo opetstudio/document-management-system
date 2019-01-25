@@ -134,7 +134,9 @@
   <!-- Security access logger -->
   <beans:bean id="loggerListener" class="com.openkm.spring.LoggerListener"/>
 
-  <jee:jndi-lookup id="dataSource" jndi-name="jdbc/OpenKMDS" resource-ref="true"/>
+  <!-- <jee:jndi-lookup id="dataSource" jndi-name="java:jboss/datasources/ExampleDS" resource-ref="true"/> -->
+  <jee:jndi-lookup id="dataSource" jndi-name="java:/jdbc/openkmDS" resource-ref="true"/>
+  <!-- <jee:jndi-lookup id="dataSource" jndi-name="java:jdbc/OpenKMDS" resource-ref="true"/> -->
 
   <!-- Security configuration moved to $CATALINA_HOME/OpenKM.xml -->
   <!-- WINFIX

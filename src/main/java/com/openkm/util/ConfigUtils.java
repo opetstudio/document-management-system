@@ -23,6 +23,8 @@ package com.openkm.util;
 
 import com.openkm.core.Config;
 
+import bsh.commands.dir;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -96,14 +98,22 @@ public class ConfigUtils {
 	}
 
 	public static List<String> getResourceListing(ClassLoader cl, String path) throws URISyntaxException, IOException {
+		System.out.println("ConfigUtils.getResourceListing=========>>>>>>>>path="+path);
 		URL dirUrl = cl.getResource(path);
+		if(dirUrl != null) {
+			System.out.println("ConfigUtils.getResourceListing=========>>>>>>>>dirUrl is not null path="+dirUrl.getPath());
+			System.out.println("ConfigUtils.getResourceListing=========>>>>>>>>dirUrl is not null dirUrl Str="+dirUrl.toString());
+			System.out.println("ConfigUtils.getResourceListing=========>>>>>>>>dirUrl is not null dirUrl protocol="+dirUrl.getProtocol());
+		}
 
-		if (dirUrl != null && dirUrl.getProtocol().equals("file")) {
+		if (dirUrl != null && (dirUrl.getProtocol().equals("file") || dirUrl.getProtocol().equals("vfs"))) {
 			/* A file path: easy enough */
-			return Arrays.asList(new File(dirUrl.toURI()).list());
+//			return Arrays.asList(new File(dirUrl.toURI()).list());
+			return Arrays.asList(new File(dirUrl.getPath()).list());
 		}
 
 		if (dirUrl == null) {
+			System.out.println("ConfigUtils.getResourceListing=========>>>>>>>>dirUrl is null");
 		    /*
 	         * In case of a jar file, we can't actually find a directory.
 	         * Have to assume the same jar as clazz.
